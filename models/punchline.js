@@ -8,7 +8,7 @@ var punchlineSchema = new Schema({
     created: { type: Date, default: Date.now },
     updated: { type: Date, default: Date.now },
     hidden: Boolean,
-    battle: String,
+    battle: { type: Schema.ObjectId, ref: 'Battle' },
     meta: {
         goods: Number,
         bads: Number,
