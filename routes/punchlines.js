@@ -1,13 +1,13 @@
 var express = require('express');
 var router = express.Router();
-var messages = require('../controllers/messages.js');
+var messages = require('../controllers/punchlines.js');
 /* GET home page. */
-router.route('/messages')
+router.route('/punchlines')
     .get(messages.list)
     .post(messages.create)
 ;
 
-router.route('/messages/:id')
+router.route('/punchlines/:id')
     .get(messages.get)
     .put(messages.update)
     .delete(messages.delete)
